@@ -1,0 +1,28 @@
+﻿@model LibraryManagementSystem.Models.UserInfo
+@{
+    ViewData["Title"] = "Login Page";
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div class="justify-content-center">
+        <h3>Login</h3>
+        <div>
+            <form asp-action="Login" method="post">
+                <div>
+                    <label asp-for="Username">Username</label>
+                    <input asp-for="Username" type="text" />
+                </div>
+                <div>
+                    <label asp-for="Password">Password</label>
+                    <input asp-for="Password" />
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <a asp-action="Register">New User? Register</a>
+        </div>
+    </div>
+</body>
+</html>

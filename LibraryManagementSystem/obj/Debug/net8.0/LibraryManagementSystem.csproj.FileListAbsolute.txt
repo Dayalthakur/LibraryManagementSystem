@@ -169,3 +169,4 @@ D:\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSys
 D:\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\net8.0\LibraryManagementSystem.pdb
 D:\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\net8.0\LibraryManagementSystem.genruntimeconfig.cache
 D:\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\net8.0\ref\LibraryManagementSystem.dll
+D:\Projects\LibraryManagementSystem\LibraryManagementSystem\LibraryManagementSystem\obj\Debug\net8.0\LibraryManagementSystem.sourcelink.json

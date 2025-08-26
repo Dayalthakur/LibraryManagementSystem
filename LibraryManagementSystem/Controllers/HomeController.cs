@@ -7,15 +7,47 @@ namespace LibraryManagementSystem.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly LibraryManagementSystemContext _dbcontext;
+        public HomeController(ILogger<HomeController> logger, LibraryManagementSystemContext dbcontext)
         {
             _logger = logger;
+            _dbcontext = dbcontext;
         }
 
-        public IActionResult Index()
+        public IActionResult Login()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult Login(UserInfo user)
+        {
+            if (user != null)
+            {
+                var data = _dbcontext.UserInfos.Where(x => x.Username == user.Username && x.Password == user.Password).FirstOrDefault();
+                if (data != null)
+                {
+                    return RedirectToAction("Dashboard");
+                }
+            }
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Dashboard()
+        {
+            var TotalCopies = _dbcontext.Books.Sum(x => x.TotalCopies);
+            var Issued = _dbcontext.IssuedBooks.Count();
+            return View();
+        }
+        public IActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Register(UserInfo user)
+        {
+            _dbcontext.UserInfos.Add(user);
+            _dbcontext.SaveChanges();
+            return RedirectToAction("Login");
         }
 
         public IActionResult Privacy()
