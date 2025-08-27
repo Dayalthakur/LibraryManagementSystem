@@ -26,18 +26,13 @@ namespace LibraryManagementSystem.Controllers
                 var data = _dbcontext.UserInfos.Where(x => x.Username == user.Username && x.Password == user.Password).FirstOrDefault();
                 if (data != null)
                 {
-                    return RedirectToAction("Dashboard");
+                    return RedirectToAction("Dashboard","Book");
                 }
             }
             return RedirectToAction("Index");
         }
 
-        public IActionResult Dashboard()
-        {
-            var TotalCopies = _dbcontext.Books.Sum(x => x.TotalCopies);
-            var Issued = _dbcontext.IssuedBooks.Count();
-            return View();
-        }
+        
         public IActionResult Register()
         {
             return View();

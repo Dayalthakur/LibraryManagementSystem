@@ -1,0 +1,30 @@
+﻿@model LibraryManagementSystem.Models.Book
+@{
+    ViewData["Title"] = "Create";
+}
+<html>
+<head>
+</head>
+<body>
+    <div>
+        <h3>Create</h3>
+        <div>
+            <form method="post" asp-action="Create">
+                <div>
+                    <label asp-for="Title">Title</label>
+                    <input type="text" asp-for="Title" placeholder="Title" />
+                </div>
+                <div>
+                    <label asp-for="Author">Author</label>
+                    <input type="text" asp-for="Author" placeholder="Name of Author" />
+                </div>
+                <div>
+                    <label asp-for="TotalCopies">Title</label>
+                    <input type="text" asp-for="TotalCopies" placeholder="No. of Copies" />
+                </div>
+                <button type="submit">Create</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

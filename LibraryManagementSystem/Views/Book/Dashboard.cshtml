@@ -1,0 +1,16 @@
+﻿@model LibraryManagementSystem.Models.Book
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <h3>Dashboard</h3>
+        <a asp-action="CreateBook" class="btn btn-primary">Create New Book</a>
+        <a asp-action="IssueBook" asp-controller="IssuedBook" class="btn btn-primary">Issue Book</a>
+    </div>
+</body>
+</html>

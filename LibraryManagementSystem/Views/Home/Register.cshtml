@@ -1,0 +1,28 @@
+﻿@model LibraryManagementSystem.Models.UserInfo
+@{
+    ViewData["Title"] = "Registration";
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <form method="post" asp-action="Register">
+            <div>
+                <label asp-for="Username">Username</label>
+                <input asp-for="Username" type="text" />
+            </div>
+            <div>
+                <label asp-for="Password">Password</label>
+                <input asp-for="Password" type="text" />
+            </div>
+            <div>
+                <label asp-for="Email">Email</label>
+                <input asp-for="Email" type="email" />
+            </div>
+            <button type="submit">Create User</button>
+        </form>
+    </div>
+</body>
+</html>
